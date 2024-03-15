@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 377767027855395465}
   - component: {fileID: 6197674879935247984}
   - component: {fileID: 7475780652080124716}
-  - component: {fileID: 3776594149114546799}
+  - component: {fileID: 1228988981921425325}
+  - component: {fileID: 3248830582282867164}
   m_Layer: 8
   m_Name: F18A
   m_TagString: Untagged
@@ -98,9 +99,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5638021280938902188}
   serializedVersion: 4
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Mass: 400
+  m_Drag: 1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -117,7 +118,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3776594149114546799
+--- !u!65 &1228988981921425325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638021280938902188}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 143.29329, y: 119.04044, z: 148.15869}
+  m_Center: {x: 2.5954514, y: 55.20557, z: -67.8994}
+--- !u!114 &3248830582282867164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,18 +148,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5638021280938902188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 692177b428a2ec64eaca7372b2144efd, type: 3}
+  m_Script: {fileID: 11500000, guid: b0f1629fc7ef5ba4ca5879abe2fe5f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  thrust: 100
-  turnTorque: {x: 90, y: 25, z: 45}
-  forceMult: 1000
-  sensitivity: 5
-  aggressiveTurnAngle: 10
-  pitch: 0
-  yaw: 0
-  roll: 0
+  throttleIncrement: 0.1
+  maxThrust: 200
+  ressponsiveness: 10
+  hud: {fileID: 0}
 --- !u!1001 &1223504273663962702
 PrefabInstance:
   m_ObjectHideFlags: 0
