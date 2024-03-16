@@ -30,4 +30,9 @@ public class CameraController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
         transform.forward = povs[index].forward;
     }
+    public void DisableOrDeleteScript()
+    {
+        // Remove the script component from the GameObject
+        Destroy(this);
+    }
 }

@@ -2,18 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class KillPlayer : MonoBehaviour
 {
-    public int Respawn;
     
+    public bool isGameOver;
+    public GameObject gameOverUI;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("KillPlayer"))
         {
-            SceneManager.LoadScene(Respawn);
+            isGameOver = true;
+            gameOverUI.SetActive(true);
+            die();
+            GetComponent<CameraController>().DisableOrDeleteScript();
         }
     }
+
+    private void die()
+    {
+        Destroy(gameObject);
+    }
+    
 }

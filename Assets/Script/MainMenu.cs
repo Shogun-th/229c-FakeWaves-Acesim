@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+   public int Respawn;
    public void Play()
    {
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -13,6 +14,15 @@ public class MainMenu : MonoBehaviour
    {
       Application.Quit();
       Debug.Log("Player HAS Quit The Game");
+   }
+   public void Rusume()
+   {
+      SceneManager.LoadScene(Respawn);
+   }
+   public void TurnMainMenu()
+   {
+       
+      SceneManager.LoadScene("MainMenu");
    }
       
 }

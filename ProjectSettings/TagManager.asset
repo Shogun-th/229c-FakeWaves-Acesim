@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AICars
+  - KillPlayer
   layers:
   - Default
   - TransparentFX
