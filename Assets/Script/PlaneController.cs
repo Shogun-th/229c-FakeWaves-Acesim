@@ -43,7 +43,7 @@ public class PlaneController : MonoBehaviour
         yaw = Input.GetAxis("Yaw");
 
         if (Input.GetKey(KeyCode.Space)) throttle += throttleIncrement;
-        else if (Input.GetKey(KeyCode.LeftControl)) throttle -= throttleIncrement;
+        else if (Input.GetKey(KeyCode.Z)) throttle -= throttleIncrement;
         throttle = Mathf.Clamp(throttle, 0f, 100f);
 
     }
