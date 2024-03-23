@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AICars
   - KillPlayer
+  - Item
   layers:
   - Default
   - TransparentFX

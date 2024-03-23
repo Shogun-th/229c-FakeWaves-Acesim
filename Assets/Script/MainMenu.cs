@@ -24,5 +24,9 @@ public class MainMenu : MonoBehaviour
        
       SceneManager.LoadScene("MainMenu");
    }
-      
+   
+   public void Credits()
+   {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + "Credits" );
+   }
 }
